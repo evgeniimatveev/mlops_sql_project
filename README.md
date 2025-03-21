@@ -1,15 +1,17 @@
 # MLOps SQL Project 🚀  
-![MLOps](https://img.shields.io/badge/MLOps-Automation-blue)  
-![Tracking](https://img.shields.io/badge/Tracking-MLflow%20%7C%20W%26B-orange)  
-![SQL](https://img.shields.io/badge/Database-PostgreSQL-blue)  
-![CI/CD](https://img.shields.io/badge/CI/CD-GitHub%20Actions-green)  
+![SQL](https://img.shields.io/badge/SQL-PostgreSQL-blue)  
+![Tableau](https://img.shields.io/badge/Tableau-Visualization-orange)  
+![Excel](https://img.shields.io/badge/Excel-Data_Analysis-green)  
+![Python](https://img.shields.io/badge/Python-Automation-blue)  
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)  
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)  
 
+---
+
 ## Overview  
 
-This repository provides a **structured MLOps project** that integrates **SQL, Python, Tableau**, and **MLOps automation**.  
-The project includes **data pipelines**, **SQL-based experiment analysis**, and **Python scripts for automated data and report generation**.
+This repository provides a **structured MLOps project** that integrates **SQL, Python, Tableau**, and **Excel-based analysis**.  
+It includes **SQL data queries**, **Python scripts for automation**, and **Tableau dashboards for visualization**.
 
 ---
 
@@ -81,65 +83,44 @@ mlops_sql_project/
 │
 ├── environment.yaml  # Conda environment setup
 ├── README.md  # Project Documentation
-### Features
-✅ Modular & Scalable folder structure for SQL, Python, and BI tools.
-✅ SQL-based Analytics for experiment analysis and tracking.
-✅ MLOps Automation via Python scripts for preprocessing and reporting.
-✅ CI/CD Integration (Future Scope) for automated SQL & BI workflows.
+```
 
-### Tech Stack
-PostgreSQL – SQL database for structured queries
-Python – Data manipulation & automation
-Tableau – Visualization & analytics
-MLflow – Experiment tracking
-Weights & Biases (W&B) – Logging & Sweeps
-GitHub Actions ⚙️ – CI/CD pipeline
-Setup & Installation
-### 1️⃣ Clone the repository
-bash
-Copy
-Edit
+## Features
+
+✅ **SQL-Powered Analytics** with structured queries and joins.  
+✅ **Excel + Tableau** for reporting and visualization.  
+✅ **Python Automation** for data generation and preprocessing.  
+✅ **Scalable Architecture** for BI & Data Analysis.  
+
+---
+
+## Tech Stack  
+
+- **PostgreSQL** – SQL-based data storage & queries  
+- **Tableau** – Interactive dashboards and reporting  
+- **Excel** – Static reports and aggregated insights  
+- **Python** – Data automation and preprocessing  
+- **GitHub Actions** – CI/CD for automation  
+
+---
+
+## Getting Started  
+
+### 1️⃣ Clone the repository  
+
+
 git clone https://github.com/your-username/mlops_sql_project.git
 cd mlops_sql_project
-### 2️⃣ Create a virtual environment (Optional)
-bash
-Copy
-Edit
+2️⃣ Create a virtual environment (Optional)
+
 conda env create -f environment.yaml
-conda activate mlops_sql_env
-OR
+conda activate mlops_env
 
-bash
-Copy
-Edit
 python -m venv venv
-source venv/bin/activate  # macOS/Linux
-venv\Scripts\activate  # Windows
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate  # On Windows
 pip install -r requirements.txt
-Running SQL Queries
-Open PostgreSQL connection
-sql
-Copy
-Edit
-psql -U your_user -d your_database
-OR
-
-bash
-Copy
-Edit
-pgAdmin 4 → Connect to DB → Run Queries
-Example: Run top_10_customers_by_spent.sql
-sql
-Copy
-Edit
-SELECT customer_id, SUM(order_value) AS total_spent
-FROM orders
-GROUP BY customer_id
-ORDER BY total_spent DESC
-LIMIT 10;
 Future Plans
-✅ Integrate MLflow & W&B
-✅ Automate SQL + Python ETL
-✅ Add GitHub Actions for CI/CD
-
-⚡ Happy Data Engineering & Experiment Tracking! 🚀
+✅ Advanced SQL optimization
+✅ Improved Tableau dashboards
+✅ CI/CD for SQL workflow automation
