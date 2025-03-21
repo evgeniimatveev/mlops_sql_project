@@ -100,23 +100,36 @@ mlops_sql_project/
 
 ---
 
-## Getting Started  
+##  Setup & Installation  
 
 ### 1️⃣ Clone the repository  
 
-
+```bash
 git clone https://github.com/your-username/mlops_sql_project.git
 cd mlops_sql_project
-2️⃣ Create a virtual environment (Optional)
+```
 
+
+
+2️⃣ Create a virtual environment (Optional)
+```bash
 conda env create -f environment.yaml
 conda activate mlops_env
-
+```
+```bash
 python -m venv venv
 source venv/bin/activate  # On macOS/Linux
 venv\Scripts\activate  # On Windows
 pip install -r requirements.txt
-Future Plans
+```
+
+---
+##  Future Plans
 ✅ Advanced SQL optimization
 ✅ Improved Tableau dashboards
 ✅ CI/CD for SQL workflow automation
+
+
+---
+
+⚡ **Happy Coding & Experiment Tracking!** 
