@@ -17,12 +17,28 @@ jobs:
         uses: actions/checkout@v3
 
       - name: 🔎 Install SQLFluff
-        run: pip install sqlfluff sqlfluff-templater-jinja
+        run: pip install sqlfluff[jinja]
 
-      - name: 🛠 Autoformat SQL files (Fix common issues)
+      - name: 🔧 Autoformat SQL files (Fix common issues)
         run: |
-          sqlfluff fix sql/ --dialect postgres --rules L001,L003,L010,L011,L012,L029,L030,L031,L034 || true
+          sqlfluff fix sql/ --dialect postgres || true  # Игнорировать ошибки форматирования
 
       - name: 🚨 Run SQL Linter
         run: |
-          sqlfluff lint sql/ --dialect postgres --format github-annotation --ignore parsing
+          sqlfluff lint sql/ --dialect postgres
+
+  sql-ci-cd:
+    name: 🚀 SQL CI/CD Automation
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎 Checkout repository
+        uses: actions/checkout@v3
+
+      - name: ✅ Verify SQL files exist
+        run: ls -al sql/
+
+      - name: 📂 Upload SQL Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: sql-files
+          path: sql/
