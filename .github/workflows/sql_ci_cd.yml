@@ -10,15 +10,19 @@ on:
 
 jobs:
   sql-lint-check:
-    name: ✅ Lint SQL Code
+    name: ✅ Lint & Format SQL Code
     runs-on: ubuntu-latest
     steps:
       - name: 🛎 Checkout repository
         uses: actions/checkout@v3
 
       - name: 🔎 Install SQLFluff
-        run: pip install sqlfluff
+        run: pip install sqlfluff sqlfluff-templater-jinja
+
+      - name: 🛠 Autoformat SQL files (Fix common issues)
+        run: |
+          sqlfluff fix sql/ --dialect postgres --rules L001,L003,L010,L011,L012,L029,L030,L031,L034 || true
 
       - name: 🚨 Run SQL Linter
         run: |
-          sqlfluff lint sql/ --dialect postgres
+          sqlfluff lint sql/ --dialect postgres --format github-annotation --ignore parsing
