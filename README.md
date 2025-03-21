@@ -1,10 +1,5 @@
 # MLOps SQL Project 🚀  
-![SQL](https://img.shields.io/badge/SQL-PostgreSQL-blue)  
-![Tableau](https://img.shields.io/badge/Tableau-Visualization-orange)  
-![Excel](https://img.shields.io/badge/Excel-Data_Analysis-green)  
-![Python](https://img.shields.io/badge/Python-Automation-blue)  
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)  
-![License](https://img.shields.io/badge/License-MIT-lightgrey)  
+# MLOps SQL Project 🚀  ![SQL](https://img.shields.io/badge/SQL-PostgreSQL-blue) ![Tableau](https://img.shields.io/badge/Tableau-Visualization-orange) ![Excel](https://img.shields.io/badge/Excel-Reports-green) ![Python](https://img.shields.io/badge/Python-Automation-yellow) ![Status](https://img.shields.io/badge/Status-Active-brightgreen) ![License](https://img.shields.io/badge/License-MIT-lightgrey)  
 
 ---
 
