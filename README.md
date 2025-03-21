@@ -81,13 +81,13 @@ mlops_sql_project/
 │
 ├── environment.yaml  # Conda environment setup
 ├── README.md  # Project Documentation
-Features
+### Features
 ✅ Modular & Scalable folder structure for SQL, Python, and BI tools.
 ✅ SQL-based Analytics for experiment analysis and tracking.
 ✅ MLOps Automation via Python scripts for preprocessing and reporting.
 ✅ CI/CD Integration (Future Scope) for automated SQL & BI workflows.
 
-Tech Stack
+### Tech Stack
 PostgreSQL – SQL database for structured queries
 Python – Data manipulation & automation
 Tableau – Visualization & analytics
@@ -95,13 +95,13 @@ MLflow – Experiment tracking
 Weights & Biases (W&B) – Logging & Sweeps
 GitHub Actions ⚙️ – CI/CD pipeline
 Setup & Installation
-1️⃣ Clone the repository
+### 1️⃣ Clone the repository
 bash
 Copy
 Edit
 git clone https://github.com/your-username/mlops_sql_project.git
 cd mlops_sql_project
-2️⃣ Create a virtual environment (Optional)
+### 2️⃣ Create a virtual environment (Optional)
 bash
 Copy
 Edit
