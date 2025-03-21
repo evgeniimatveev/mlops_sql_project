@@ -1,7 +1,7 @@
-SQL File Organization
+## SQL File Organization
  
-DQL (Data Analysis & Reporting)
-
+## DQL (Data Analysis & Reporting)
+```plaintext
 A. Data Validation & Structure
 
 01_check_constraints.sql → Retrieves all table constraints.
@@ -38,4 +38,5 @@ d. Joints
 23_avg_order_value.sql → Calculates the average order value per customer.
 24_returning_customers.sql → Identifies returning customers (more than 1 order).
 25_bonus.sql → Executes a special bonus query for additional insights.
-26_cleaned_bonus.sql → Refines 25_bonus.sql by replacing NULL values with meaningful defaults. 
+26_cleaned_bonus.sql → Refines 25_bonus.sql by replacing NULL values with meaningful defaults.
+```
