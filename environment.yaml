@@ -1,0 +1,9 @@
+name: my_env
+dependencies:
+  - python=3.9
+  - psycopg2
+  - pandas
+  - faker
+  - tqdm
+  - numpy
+  - openpyxl

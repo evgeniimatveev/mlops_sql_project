@@ -1,0 +1,6 @@
+psycopg2
+pandas
+faker
+tqdm
+numpy
+openpyxl
