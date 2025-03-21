@@ -22,19 +22,3 @@ jobs:
       - name: 🚨 Run SQL Linter
         run: |
           sqlfluff lint sql/ --dialect postgres
-          
-  sql-ci-cd:
-    name: 🚀 SQL CI/CD Automation
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🛎 Checkout repository
-        uses: actions/checkout@v3
-
-      - name: ✅ Verify SQL files exist
-        run: ls -al sql/
-
-      - name: 📂 Upload SQL Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: sql-files
-          path: sql/
