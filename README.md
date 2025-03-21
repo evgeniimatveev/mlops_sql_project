@@ -15,32 +15,45 @@ It includes **SQL data queries**, **Python scripts for automation**, and **Table
 
 ```plaintext
 mlops_sql_project/
-├── env/   # Environment Configuration
-├── Excel/
+├── env/  # Environment Configuration
+│   ├── .env                # Environment variables (e.g. DB credentials)
+│   ├── config_template.json  # Template config file for local testing
+│   ├── db_config.yaml      # Database configuration (host, port, user, etc.)
+│   ├── logging_config.yaml # Logging configuration (for Python logs)
+│   └── settings.json       # General project settings
+│
+├── Excel/  # Excel-based Analysis (exported reports or manual exploration)
 │   ├── transactions_overview.xlsx 
 │   ├── sales_summary.xlsx  
-│   ├── customer_behavior.xlsx  # Excel-based Analysis
+│   ├── customer_behavior.xlsx  
+│
 ├── Tableau/  # Tableau Dashboards & Reports
-│   ├── sales_dashboard.twb
-│   ├── transaction_analysis.twb
-│   ├── customer_insights.twb
+│   ├── sales_dashboard.twb         # KPI dashboard for sales
+│   ├── transaction_analysis.twb    # Visualization of transaction flow
+│   ├── customer_insights.twb       # Customer segmentation & behavior
 │
 ├── python/  # Data Generation & Automation
-│   ├── generate_customers.py  # Generates random customer data
-│   ├── generate_orders.py  # Generates random orders
-│   ├── generate_products.py  # Generates product catalog
-│   ├── generate_transactions.py  # Simulates transaction history
-│   ├── transactions_overview.py  
-│   ├── sales_summary.py  
-│   ├── customer_behavior.py  
+│   ├── generate_customers.py           # Generates random customer data
+│   ├── generate_orders.py              # Generates random orders
+│   ├── generate_products.py            # Generates product catalog
+│   ├── generate_transactions.py        # Simulates transaction history
+│   ├── transactions_overview.py        # Generates Excel summary
+│   ├── sales_summary.py                # KPIs for Tableau dashboard
+│   ├── customer_behavior.py            # Behavior analysis summary
+│
 ├── sql/  # Structured SQL Queries
 │   ├── ddl/  # Schema definition (Create, Constraints)
 │   │   ├── 01_create_database.sql
 │   │   ├── 02_create_tables.sql
 │   │   ├── 03_constraints.sql
+│   │   ├── 04_indexes.sql              # Optional: add indexing strategies
+│   │   └── 05_create_views.sql         # Optional: views for Tableau
 │   │
 │   ├── dml/  # Data Manipulation (Insert, Update, Delete)
 │   │   ├── 00_truncate_tables.sql
+│   │   ├── 01_insert_sample_data.sql   # Bulk insert for sample dataset
+│   │   ├── 02_update_customer_info.sql # Sample update query
+│   │   └── 03_delete_test_data.sql     # Remove dummy/test entries
 │   │
 │   ├── dql/  # Queries & Analysis
 │   │   ├── a_checks/  # Data Validation & Structure
@@ -49,6 +62,7 @@ mlops_sql_project/
 │   │   │   ├── 03_check_table_dependencies.sql
 │   │   │   ├── 04_check_indexes_primary_keys.sql
 │   │   │   ├── 05_check_privileges.sql
+│   │   │   └── 06_null_value_check.sql         # Check for NULLs in key columns
 │   │   │
 │   │   ├── b_aggregations/  # Aggregation & Statistical Analysis
 │   │   │   ├── 06_table_counts.sql
@@ -56,6 +70,7 @@ mlops_sql_project/
 │   │   │   ├── 08_counts_the_number_of_products.sql
 │   │   │   ├── 09_min_max_and_average_price.sql
 │   │   │   ├── 10_stock_statistics.sql
+│   │   │   └── 11_sales_by_category.sql
 │   │   │
 │   │   ├── c_transactions/  # Orders & Transactions
 │   │   │   ├── 11_top_expensive_orders.sql
@@ -67,6 +82,7 @@ mlops_sql_project/
 │   │   │   ├── 17_daily_transaction_volume.sql
 │   │   │   ├── 18_top_10_biggest_transactions.sql
 │   │   │   ├── 19_top_10_biggest_customers.sql
+│   │   │   └── 20_avg_transaction_per_customer.sql
 │   │   │
 │   │   ├── d_joins/  # Multi-table Joins & Relationships
 │   │   │   ├── 20_join_customers_orders_products.sql  
@@ -78,7 +94,10 @@ mlops_sql_project/
 │   │   │   ├── 26_cleaned_bonus.sql 
 │
 ├── environment.yaml  # Conda environment setup
-├── README.md  # Project Documentation
+├── requirements.txt  # pip packages (for production or alt install)
+├── .gitignore        # Git exclusions
+├── LICENSE           # Project License (e.g., MIT)
+├── README.md         # Project Documentation
 ```
 
 ## Features
