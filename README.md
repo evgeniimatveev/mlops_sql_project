@@ -45,14 +45,9 @@ mlops_sql_project/
 │   │   ├── 01_create_database.sql
 │   │   ├── 02_create_tables.sql
 │   │   ├── 03_constraints.sql
-│   │   ├── 04_indexes.sql              # Optional: add indexing strategies
-│   │   └── 05_create_views.sql         # Optional: views for Tableau
 │   │
 │   ├── dml/  # Data Manipulation (Insert, Update, Delete)
 │   │   ├── 00_truncate_tables.sql
-│   │   ├── 01_insert_sample_data.sql   # Bulk insert for sample dataset
-│   │   ├── 02_update_customer_info.sql # Sample update query
-│   │   └── 03_delete_test_data.sql     # Remove dummy/test entries
 │   │
 │   ├── dql/  # Queries & Analysis
 │   │   ├── a_checks/  # Data Validation & Structure
