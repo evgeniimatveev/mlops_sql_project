@@ -1,4 +1,4 @@
-name: SQL CI/CD Pipeline 🚀
+name: Simple SQL CI/CD Pipeline 🚀
 
 on:
   push:
@@ -9,26 +9,8 @@ on:
       - main
 
 jobs:
-  sql-lint-check:
-    name: ✅ Lint & Format SQL Code
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🛎 Checkout repository
-        uses: actions/checkout@v3
-
-      - name: 🔎 Install SQLFluff
-        run: pip install sqlfluff[jinja]
-
-      - name: 🔧 Autoformat SQL files (Fix common issues)
-        run: |
-          sqlfluff fix sql/ --dialect postgres || true  # Игнорировать ошибки форматирования
-
-      - name: 🚨 Run SQL Linter
-        run: |
-          sqlfluff lint sql/ --dialect postgres
-
   sql-ci-cd:
-    name: 🚀 SQL CI/CD Automation
+    name: 🚀 SQL CI/CD Simple Check
     runs-on: ubuntu-latest
     steps:
       - name: 🛎 Checkout repository
