@@ -17,7 +17,6 @@ It includes **SQL data queries**, **Python scripts for automation**, and **Table
 mlops_sql_project/
 ├── env/  # Environment Configuration
 │   ├── .env                # Environment variables (e.g. DB credentials)
-│   ├── config_template.json  # Template config file for local testing
 │   ├── db_config.yaml      # Database configuration (host, port, user, etc.)
 │   ├── logging_config.yaml # Logging configuration (for Python logs)
 │   └── settings.json       # General project settings
