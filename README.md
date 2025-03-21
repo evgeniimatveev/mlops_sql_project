@@ -69,13 +69,13 @@ mlops_sql_project/
 │   │   │   ├── 19_top_10_biggest_customers.sql
 │   │   │
 │   │   ├── d_joins/  # Multi-table Joins & Relationships
-│   │   │   ├── 20_join_customers_orders_products.sql  # Customers x Orders x Products
-│   │   │   ├── 21_join_orders_transactions.sql  # Orders x Transactions
-│   │   │   ├── 22_top_10_customers_by_spent.sql → Retrieves the top 10 customers based on total transaction amount.
-│   │   │   ├── 23_avg_order_value.sql → Calculates the average order value per customer.
-│   │   │   ├── 24_returning_customers.sql → Identifies returning customers (more than 1 order).
-│   │   │   ├── 25_bonus.sql → Executes a special bonus query for additional insights.
-│   │   │   ├── 26_cleaned_bonus.sql → Refines 25_bonus.sql by replacing NULL values with meaningful defaults.
+│   │   │   ├── 20_join_customers_orders_products.sql  
+│   │   │   ├── 21_join_orders_transactions.sql  
+│   │   │   ├── 22_top_10_customers_by_spent.sql 
+│   │   │   ├── 23_avg_order_value.sql 
+│   │   │   ├── 24_returning_customers.sql
+│   │   │   ├── 25_bonus.sql 
+│   │   │   ├── 26_cleaned_bonus.sql 
 │
 ├── environment.yaml  # Conda environment setup
 ├── README.md  # Project Documentation
