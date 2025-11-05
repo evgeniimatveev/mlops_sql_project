@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🛎 Checkout repository
-        uses: actions/checkout@v4  # Обновил до v4
+        uses: actions/checkout@v4  #  v4
 
       - name: ✅ Verify SQL files exist
         run: ls -al sql/
 
       - name: 📂 Upload SQL Artifacts
-        uses: actions/upload-artifact@v4  # Обновил до v4
+        uses: actions/upload-artifact@v4  #  v4
         with:
           name: sql-files
           path: sql/
